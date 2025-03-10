@@ -287,37 +287,6 @@ CacheManager implements a sophisticated caching system:
 - Expo CLI (`npm install -g expo-cli`)
 - Android Studio or Xcode for simulators
 
-### Installation Steps
-
-1. Clone the repository:
-   ```bash
-   git clone [repository URL]
-   cd canova-app
-   ```
-
-2. Install dependencies:
-   ```bash
-   yarn install
-   # or
-   npm install
-   ```
-
-3. Configure environment variables:
-   - Create a `.env` file in the project root
-   - Add your Anthropic API key:
-     ```
-     ANTHROPIC_API_KEY=your_api_key_here
-     ```
-
-4. Start the development server:
-   ```bash
-   expo start
-   ```
-
-5. Run on preferred platform:
-   - Press `a` for Android simulator
-   - Press `i` for iOS simulator
-   - Scan QR code with Expo Go app for physical device
 
 ## Usage
 
