@@ -24,11 +24,11 @@ This document provides an overview of my recommendation architecture, comparing 
 <div align="center">
 <div style="display: flex; flex-direction: row; gap: 20px; margin-bottom: 20px;">
     <div>
-        <img src="screenshots/recommendations-screen.png" alt="Recommendation Screen" width="380px">
+        <img src="Screenshot from 2025-03-10 08-29-01.png" alt="Recommendation Screen" width="380px">
         <p><em>Strain Recommendations</em></p>
     </div>
     <div>
-        <img src="Screenshot from 2025-03-10 08-25-05.png , Screenshot from 2025-03-10 08-27-12.png" alt="Chat Interface" width="380px">
+        <img src="Screenshot from 2025-03-10 08-25-05.png" alt="Chat Interface" width="380px">
         <p><em>AI Chat Assistant</em></p>
     </div>
 </div>
