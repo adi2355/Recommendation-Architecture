@@ -1,7 +1,7 @@
 #Recommendation System
 
 <div align="center">
-<h3>Intelligent strain recommendations powered by AI and advanced similarity matching</h3>
+<h3>2 approaches for my strain recommendation and advanced similarity matching</h3>
 </div>
 
 ---
