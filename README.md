@@ -114,9 +114,8 @@ This document provides an overview of my recommendation architecture, comparing 
 </div>
 <div style="flex: 1;">
 
-### Current Architecture
 
-### Architecture Diagram
+### Current Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
