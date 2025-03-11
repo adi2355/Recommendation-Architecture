@@ -43,6 +43,7 @@ This document provides an overview of my recommendation architecture, comparing 
     </div>
 </div>
 </div>
+
 ## Architecture Overview
 
 <div style="display: flex; flex-direction: row; gap: 20px;">
