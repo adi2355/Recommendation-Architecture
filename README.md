@@ -19,7 +19,30 @@ This document provides an overview of my recommendation architecture, comparing 
 | **Performance** | API-dependent | Optimized with sparse matrices and caching |
 
 ---
+## Application Showcase
 
+<div align="center">
+<div style="display: flex; flex-direction: row; gap: 20px; margin-bottom: 20px;">
+    <div>
+        <img src="screenshots/recommendations-screen.png" alt="Recommendation Screen" width="380px">
+        <p><em>Strain Recommendations</em></p>
+    </div>
+    <div>
+        <img src="Screenshot from 2025-03-10 08-25-05.png , Screenshot from 2025-03-10 08-27-12.png" alt="Chat Interface" width="380px">
+        <p><em>AI Chat Assistant</em></p>
+    </div>
+</div>
+<div style="display: flex; flex-direction: row; gap: 20px;">
+    <div>
+        <img src="Screenshot from 2025-03-10 08-30-10.png" alt="Journal Analysis" width="380px">
+        <p><em>Journal Insights</em></p>
+    </div>
+    <div>
+        <img src="Screenshot from 2025-03-10 22-30-40.png" alt="Safety Features" width="380px">
+        <p><em>Safety Features</em></p>
+    </div>
+</div>
+</div>
 ## Architecture Overview
 
 <div style="display: flex; flex-direction: row; gap: 20px;">
