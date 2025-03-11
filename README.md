@@ -1,6 +1,6 @@
 # Recommendation System
 
-<div align="center">
+<div align="left">
 <h3>2 approaches for my strain recommendation and advanced similarity matching</h3>
 </div>
 
