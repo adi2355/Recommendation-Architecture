@@ -242,13 +242,13 @@ This document provides an overview of my recommendation architecture, comparing 
 
 | Component | **Previous Implementation** | **Current Implementation** |
 |:--|:--|:--|
-| **AIService** | Central orchestrator for AI features | Central orchestrator for AI features |
-| **Strain Matching Engine** | Not present | Advanced recommendation system with multi-vector similarity, sparse matrix optimization, diversity selection, confidence scoring, and negative correlation insights |
-| **SafetyService** | Ensures recommendations are safe | Ensures recommendations are safe |
-| **CacheManager** | Multi-level caching system | Multi-level caching system |
-| **FeedbackService** | Collects and processes user feedback | Collects and processes user feedback |
-| **StrainService** | Manages cannabis strain data | Manages cannabis strain data |
-| **DatabaseManager** | Coordinates database access | Coordinates database access |
+| **AIService** | Central orchestrator for AI features             | Central orchestrator for AI features |
+| **Strain Matching Engine** | Not present             | Advanced recommendation system with multi-vector similarity, sparse matrix optimization, diversity selection, confidence scoring, and negative correlation insights |
+| **SafetyService** | Ensures recommendations are safe             | Ensures recommendations are safe |
+| **CacheManager** | Multi-level caching system             | Multi-level caching system |
+| **FeedbackService** | Collects and processes user feedback             | Collects and processes user feedback |
+| **StrainService** | Manages cannabis strain data             | Manages cannabis strain data |
+| **DatabaseManager** | Coordinates database access             | Coordinates database access |
 
 ---
 
