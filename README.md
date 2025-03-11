@@ -27,7 +27,7 @@ Canova follows a layered architecture with clear separation of concerns:
 
 The system uses a combination of AI-powered analysis (via Anthropic's Claude API) and local algorithms for strain matching, pattern recognition, and safety validation.
 
-### Architecture Diagram
+# Canova AI Service Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -90,7 +90,47 @@ The system uses a combination of AI-powered analysis (via Anthropic's Claude API
 └─────────────────────────────────────────┘
 ```
 
-## Data Flow
+## Key Components and Data Flow
+
+1. **UI Layer**: React Native components that provide the user interface
+   - RecommendationsScreen: Main screen for strain recommendations
+   - RecommendationFeedback: Component for collecting user feedback
+   - Other screens and components for different features
+
+2. **Hook Layer**: React hooks that serve as the interface between UI and services
+   - useAIRecommendations: Main hook for accessing AI features
+   - useStrains: Hook for strain data management
+   - useDataService/useTimeRangeData: Hooks for analytics and visualization
+
+3. **Service Layer**: Core business logic
+   - AIService: Central orchestrator for AI features
+     - Contains AnthropicAPI for external API communication
+     - Integrates with CacheManager for performance optimization
+     - Works with FeedbackService for user feedback handling
+   - SafetyService: Handles safety validation and monitoring
+   - StrainService: Manages cannabis strain data and search
+
+4. **Database Layer**: Persistent storage
+   - DatabaseManager: Coordinates database access
+   - SQLite databases for different data types
+   - AsyncStorage for simple key-value storage
+
+5. **External API Layer**
+   - Anthropic Claude API: Provides AI capabilities
+
+## Flow Overviews
+
+1. **Recommendation Flow**:
+   UI → useAIRecommendations → AIService → SafetyService → AnthropicAPI → CacheManager → UI
+
+2. **Chat Flow**:
+   UI → useAIRecommendations → AIService → SafetyService →AnthropicAPI → CacheManager → UI
+
+3. **Journal Analysis Flow**:
+   UI → useAIRecommendations → AIService → AnthropicAPI → UI
+
+4. **Strain Search Flow**:
+   UI → useStrains → StrainService → DatabaseManager → UI
 
 ### Recommendation Flow
 
