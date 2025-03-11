@@ -175,6 +175,44 @@ This document provides an overview of my recommendation architecture, comparing 
 
 ## Data Flow
 
+## Data Flow Diagrams
+
+### Previous Implementation
+
+#### Recommendation Flow
+```
+┌────┐     ┌───────────────────┐     ┌─────────┐     ┌──────────────┐     ┌─────────────┐     ┌─────────────┐     ┌────┐
+│ UI │────►│useAIRecommendations────►│AIService│────►│SafetyService │────►│AnthropicAPI │────►│CacheManager │────►│ UI │
+└────┘     └───────────────────┘     └─────────┘     └──────────────┘     └─────────────┘     └─────────────┘     └────┘
+```
+
+#### Chat Flow
+```
+┌────┐     ┌───────────────────┐     ┌─────────┐     ┌─────────────┐     ┌─────────────┐     ┌────┐
+│ UI │────►│useAIRecommendation│───► │AIService│────►│AnthropicAPI │────►│CacheManager │────►│ UI │
+└────┘     └───────────────────┘     └─────────┘     └─────────────┘     └─────────────┘     └────┘
+```
+
+### Current Implementation
+
+#### Recommendation Flow
+```
+┌────┐     ┌───────────────────┐     ┌─────────┐     ┌──────────────┐     ┌─────────────┐     ┌───────────────────────┐     ┌─────────────┐     ┌────┐
+│ UI │────►│useAIRecommendation│────►│AIService│────►│SafetyService │────►│AnthropicAPI │────►│Strain Matching Engine │────►│CacheManager │────►│ UI │
+└────┘     └───────────────────┘     └─────────┘     └──────────────┘     └─────────────┘     │(Multi-VectorSimilarity│     └─────────────┘     └────┘
+                                                                                              │Calculations)          │
+                                                                                              └───────────────────────┘
+```
+
+#### Chat Flow
+```
+┌────┐     ┌───────────────────┐     ┌─────────┐     ┌─────────────────┐     ┌───────────────────────┐     ┌─────────────────┐     ┌─────────────┐     ┌────┐
+│ UI │────►│useAIRecommendation│────►│AIService│────►│AnthropicAPI     │────►│Strain Matching Engine │────►│AnthropicAPI     │────►│CacheManager │────►│ UI │
+└────┘     └───────────────────┘     └─────────┘     │(QueryProcessing)│     │(Multi-VectorSimilarity│     │(Response Fusion)│     └─────────────┘     └────┘
+                                                     └─────────────────┘     │Calculations)          │     └─────────────────┘
+                                                                             └───────────────────────┘
+```
+
 ### Recommendation Flow
 
 | Step | **Previous Implementation** | **Current Implementation** |
